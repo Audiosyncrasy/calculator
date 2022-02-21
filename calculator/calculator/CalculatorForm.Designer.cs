@@ -211,6 +211,7 @@
             // 
             // textBox1
             // 
+            this.textBox1.Font = new System.Drawing.Font("Roboto Mono", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.textBox1.Location = new System.Drawing.Point(195, 57);
             this.textBox1.Multiline = true;
             this.textBox1.Name = "textBox1";
