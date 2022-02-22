@@ -6,5 +6,10 @@ namespace calculator
         {
             InitializeComponent();
         }
+
+        private void brnZero_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
