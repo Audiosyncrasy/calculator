@@ -148,7 +148,7 @@
             this.btnZero.TabIndex = 9;
             this.btnZero.Text = "0";
             this.btnZero.UseVisualStyleBackColor = true;
-            this.btnZero.Click += new System.EventHandler(this.brnZero_Click);
+            this.btnZero.Click += new System.EventHandler(this.btnZero_Click);
             // 
             // btnDec
             // 

@@ -7,9 +7,14 @@ namespace calculator
             InitializeComponent();
         }
 
-        private void brnZero_Click(object sender, EventArgs e)
+        private void btnZero_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private int CalcSum(int num1, int num2)
+        {
+            
         }
     }
 }
