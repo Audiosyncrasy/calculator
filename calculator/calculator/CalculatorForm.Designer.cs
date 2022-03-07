@@ -44,7 +44,7 @@
             this.btnSubtract = new System.Windows.Forms.Button();
             this.btnAdd = new System.Windows.Forms.Button();
             this.btnEnter = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.resultBox = new System.Windows.Forms.TextBox();
             this.btnClear = new System.Windows.Forms.Button();
             this.btnEquals = new System.Windows.Forms.Button();
             this.SuspendLayout();
@@ -58,6 +58,7 @@
             this.btnSeven.TabIndex = 0;
             this.btnSeven.Text = "7";
             this.btnSeven.UseVisualStyleBackColor = true;
+            this.btnSeven.Click += new System.EventHandler(this.BtnClick);
             // 
             // btnEight
             // 
@@ -68,6 +69,7 @@
             this.btnEight.TabIndex = 1;
             this.btnEight.Text = "8";
             this.btnEight.UseVisualStyleBackColor = true;
+            this.btnEight.Click += new System.EventHandler(this.BtnClick);
             // 
             // btnNine
             // 
@@ -78,6 +80,7 @@
             this.btnNine.TabIndex = 2;
             this.btnNine.Text = "9";
             this.btnNine.UseVisualStyleBackColor = true;
+            this.btnNine.Click += new System.EventHandler(this.BtnClick);
             // 
             // btnSix
             // 
@@ -88,6 +91,7 @@
             this.btnSix.TabIndex = 5;
             this.btnSix.Text = "6";
             this.btnSix.UseVisualStyleBackColor = true;
+            this.btnSix.Click += new System.EventHandler(this.BtnClick);
             // 
             // btnFive
             // 
@@ -98,6 +102,7 @@
             this.btnFive.TabIndex = 4;
             this.btnFive.Text = "5";
             this.btnFive.UseVisualStyleBackColor = true;
+            this.btnFive.Click += new System.EventHandler(this.BtnClick);
             // 
             // btnFour
             // 
@@ -108,6 +113,7 @@
             this.btnFour.TabIndex = 3;
             this.btnFour.Text = "4";
             this.btnFour.UseVisualStyleBackColor = true;
+            this.btnFour.Click += new System.EventHandler(this.BtnClick);
             // 
             // btnThree
             // 
@@ -118,6 +124,7 @@
             this.btnThree.TabIndex = 8;
             this.btnThree.Text = "3";
             this.btnThree.UseVisualStyleBackColor = true;
+            this.btnThree.Click += new System.EventHandler(this.BtnClick);
             // 
             // btnTwo
             // 
@@ -128,6 +135,7 @@
             this.btnTwo.TabIndex = 7;
             this.btnTwo.Text = "2";
             this.btnTwo.UseVisualStyleBackColor = true;
+            this.btnTwo.Click += new System.EventHandler(this.BtnClick);
             // 
             // btnOne
             // 
@@ -138,6 +146,7 @@
             this.btnOne.TabIndex = 6;
             this.btnOne.Text = "1";
             this.btnOne.UseVisualStyleBackColor = true;
+            this.btnOne.Click += new System.EventHandler(this.BtnClick);
             // 
             // btnZero
             // 
@@ -148,7 +157,7 @@
             this.btnZero.TabIndex = 9;
             this.btnZero.Text = "0";
             this.btnZero.UseVisualStyleBackColor = true;
-            this.btnZero.Click += new System.EventHandler(this.btnZero_Click);
+            this.btnZero.Click += new System.EventHandler(this.BtnClick);
             // 
             // btnDec
             // 
@@ -159,6 +168,7 @@
             this.btnDec.TabIndex = 10;
             this.btnDec.Text = ".";
             this.btnDec.UseVisualStyleBackColor = true;
+            this.btnDec.Click += new System.EventHandler(this.BtnClick);
             // 
             // btnDivide
             // 
@@ -211,14 +221,17 @@
             this.btnEnter.Text = "ENTER";
             this.btnEnter.UseVisualStyleBackColor = false;
             // 
-            // textBox1
+            // resultBox
             // 
-            this.textBox1.Font = new System.Drawing.Font("Roboto Mono", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.textBox1.Location = new System.Drawing.Point(195, 57);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(404, 103);
-            this.textBox1.TabIndex = 16;
+            this.resultBox.Font = new System.Drawing.Font("Roboto Mono", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.resultBox.Location = new System.Drawing.Point(195, 57);
+            this.resultBox.Multiline = true;
+            this.resultBox.Name = "resultBox";
+            this.resultBox.Size = new System.Drawing.Size(404, 103);
+            this.resultBox.TabIndex = 16;
+            this.resultBox.Text = "0";
+            this.resultBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.resultBox.WordWrap = false;
             // 
             // btnClear
             // 
@@ -248,7 +261,7 @@
             this.ClientSize = new System.Drawing.Size(784, 761);
             this.Controls.Add(this.btnEquals);
             this.Controls.Add(this.btnClear);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.resultBox);
             this.Controls.Add(this.btnEnter);
             this.Controls.Add(this.btnDivide);
             this.Controls.Add(this.btnMult);
@@ -290,7 +303,7 @@
         private Button btnSubtract;
         private Button btnAdd;
         private Button btnEnter;
-        private TextBox textBox1;
+        private TextBox resultBox;
         private Button btnClear;
         private Button btnEquals;
     }

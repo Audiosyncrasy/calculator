@@ -7,9 +7,10 @@ namespace calculator
             InitializeComponent();
         }
 
-        private void btnZero_Click(object sender, EventArgs e)
+        private void BtnClick(object sender, EventArgs e)
         {
-
+            Button btn = (Button)sender;
+            resultBox.Text += btn.Text;
         }
 
         public int CalcSum(int num1, int num2)
