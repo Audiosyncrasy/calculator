@@ -10,12 +10,24 @@ namespace calculator
         private void BtnClick(object sender, EventArgs e)
         {
             Button btn = (Button)sender;
-            resultBox.Text += btn.Text;
+            ConcatIntExceptWhenZero(btn.Text);
         }
 
         public int CalcSum(int num1, int num2)
         {
             return num1 + num2;
+        }
+
+        public void ConcatIntExceptWhenZero(string num)
+        {
+            if (returnResultBox().Text != "0")
+            {
+                resultBox.Text += num;
+            }
+            else
+            {
+                resultBox.Text = num;
+            }
         }
     }
 }
