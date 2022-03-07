@@ -37,15 +37,16 @@
             this.btnThree = new System.Windows.Forms.Button();
             this.btnTwo = new System.Windows.Forms.Button();
             this.btnOne = new System.Windows.Forms.Button();
-            this.brnZero = new System.Windows.Forms.Button();
+            this.btnZero = new System.Windows.Forms.Button();
             this.btnDec = new System.Windows.Forms.Button();
             this.btnDivide = new System.Windows.Forms.Button();
             this.btnMult = new System.Windows.Forms.Button();
             this.btnSubtract = new System.Windows.Forms.Button();
-            this.brnAdd = new System.Windows.Forms.Button();
+            this.btnAdd = new System.Windows.Forms.Button();
             this.btnEnter = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.resultBox = new System.Windows.Forms.TextBox();
             this.btnClear = new System.Windows.Forms.Button();
+            this.btnEquals = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btnSeven
@@ -57,6 +58,7 @@
             this.btnSeven.TabIndex = 0;
             this.btnSeven.Text = "7";
             this.btnSeven.UseVisualStyleBackColor = true;
+            this.btnSeven.Click += new System.EventHandler(this.BtnClick);
             // 
             // btnEight
             // 
@@ -67,6 +69,7 @@
             this.btnEight.TabIndex = 1;
             this.btnEight.Text = "8";
             this.btnEight.UseVisualStyleBackColor = true;
+            this.btnEight.Click += new System.EventHandler(this.BtnClick);
             // 
             // btnNine
             // 
@@ -77,6 +80,7 @@
             this.btnNine.TabIndex = 2;
             this.btnNine.Text = "9";
             this.btnNine.UseVisualStyleBackColor = true;
+            this.btnNine.Click += new System.EventHandler(this.BtnClick);
             // 
             // btnSix
             // 
@@ -87,6 +91,7 @@
             this.btnSix.TabIndex = 5;
             this.btnSix.Text = "6";
             this.btnSix.UseVisualStyleBackColor = true;
+            this.btnSix.Click += new System.EventHandler(this.BtnClick);
             // 
             // btnFive
             // 
@@ -97,6 +102,7 @@
             this.btnFive.TabIndex = 4;
             this.btnFive.Text = "5";
             this.btnFive.UseVisualStyleBackColor = true;
+            this.btnFive.Click += new System.EventHandler(this.BtnClick);
             // 
             // btnFour
             // 
@@ -107,6 +113,7 @@
             this.btnFour.TabIndex = 3;
             this.btnFour.Text = "4";
             this.btnFour.UseVisualStyleBackColor = true;
+            this.btnFour.Click += new System.EventHandler(this.BtnClick);
             // 
             // btnThree
             // 
@@ -117,6 +124,7 @@
             this.btnThree.TabIndex = 8;
             this.btnThree.Text = "3";
             this.btnThree.UseVisualStyleBackColor = true;
+            this.btnThree.Click += new System.EventHandler(this.BtnClick);
             // 
             // btnTwo
             // 
@@ -127,6 +135,7 @@
             this.btnTwo.TabIndex = 7;
             this.btnTwo.Text = "2";
             this.btnTwo.UseVisualStyleBackColor = true;
+            this.btnTwo.Click += new System.EventHandler(this.BtnClick);
             // 
             // btnOne
             // 
@@ -137,16 +146,18 @@
             this.btnOne.TabIndex = 6;
             this.btnOne.Text = "1";
             this.btnOne.UseVisualStyleBackColor = true;
+            this.btnOne.Click += new System.EventHandler(this.BtnClick);
             // 
-            // brnZero
+            // btnZero
             // 
-            this.brnZero.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.brnZero.Location = new System.Drawing.Point(195, 528);
-            this.brnZero.Name = "brnZero";
-            this.brnZero.Size = new System.Drawing.Size(175, 75);
-            this.brnZero.TabIndex = 9;
-            this.brnZero.Text = "0";
-            this.brnZero.UseVisualStyleBackColor = true;
+            this.btnZero.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btnZero.Location = new System.Drawing.Point(195, 528);
+            this.btnZero.Name = "btnZero";
+            this.btnZero.Size = new System.Drawing.Size(175, 75);
+            this.btnZero.TabIndex = 9;
+            this.btnZero.Text = "0";
+            this.btnZero.UseVisualStyleBackColor = true;
+            this.btnZero.Click += new System.EventHandler(this.BtnClick);
             // 
             // btnDec
             // 
@@ -157,6 +168,7 @@
             this.btnDec.TabIndex = 10;
             this.btnDec.Text = ".";
             this.btnDec.UseVisualStyleBackColor = true;
+            this.btnDec.Click += new System.EventHandler(this.BtnClick);
             // 
             // btnDivide
             // 
@@ -188,15 +200,15 @@
             this.btnSubtract.Text = "-";
             this.btnSubtract.UseVisualStyleBackColor = true;
             // 
-            // brnAdd
+            // btnAdd
             // 
-            this.brnAdd.Font = new System.Drawing.Font("Roboto", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.brnAdd.Location = new System.Drawing.Point(524, 198);
-            this.brnAdd.Name = "brnAdd";
-            this.brnAdd.Size = new System.Drawing.Size(75, 75);
-            this.brnAdd.TabIndex = 11;
-            this.brnAdd.Text = "+";
-            this.brnAdd.UseVisualStyleBackColor = true;
+            this.btnAdd.Font = new System.Drawing.Font("Roboto", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btnAdd.Location = new System.Drawing.Point(524, 198);
+            this.btnAdd.Name = "btnAdd";
+            this.btnAdd.Size = new System.Drawing.Size(75, 75);
+            this.btnAdd.TabIndex = 11;
+            this.btnAdd.Text = "+";
+            this.btnAdd.UseVisualStyleBackColor = true;
             // 
             // btnEnter
             // 
@@ -204,19 +216,22 @@
             this.btnEnter.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.btnEnter.Location = new System.Drawing.Point(195, 635);
             this.btnEnter.Name = "btnEnter";
-            this.btnEnter.Size = new System.Drawing.Size(274, 75);
+            this.btnEnter.Size = new System.Drawing.Size(175, 75);
             this.btnEnter.TabIndex = 15;
             this.btnEnter.Text = "ENTER";
             this.btnEnter.UseVisualStyleBackColor = false;
             // 
-            // textBox1
+            // resultBox
             // 
-            this.textBox1.Font = new System.Drawing.Font("Roboto Mono", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.textBox1.Location = new System.Drawing.Point(195, 57);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(404, 103);
-            this.textBox1.TabIndex = 16;
+            this.resultBox.Font = new System.Drawing.Font("Roboto Mono", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.resultBox.Location = new System.Drawing.Point(195, 57);
+            this.resultBox.Multiline = true;
+            this.resultBox.Name = "resultBox";
+            this.resultBox.Size = new System.Drawing.Size(404, 103);
+            this.resultBox.TabIndex = 16;
+            this.resultBox.Text = "0";
+            this.resultBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.resultBox.WordWrap = false;
             // 
             // btnClear
             // 
@@ -229,20 +244,31 @@
             this.btnClear.Text = "CLEAR";
             this.btnClear.UseVisualStyleBackColor = false;
             // 
+            // btnEquals
+            // 
+            this.btnEquals.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btnEquals.Location = new System.Drawing.Point(394, 635);
+            this.btnEquals.Name = "btnEquals";
+            this.btnEquals.Size = new System.Drawing.Size(75, 75);
+            this.btnEquals.TabIndex = 18;
+            this.btnEquals.Text = "=";
+            this.btnEquals.UseVisualStyleBackColor = true;
+            // 
             // CalculatorForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(784, 761);
+            this.Controls.Add(this.btnEquals);
             this.Controls.Add(this.btnClear);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.resultBox);
             this.Controls.Add(this.btnEnter);
             this.Controls.Add(this.btnDivide);
             this.Controls.Add(this.btnMult);
             this.Controls.Add(this.btnSubtract);
-            this.Controls.Add(this.brnAdd);
+            this.Controls.Add(this.btnAdd);
             this.Controls.Add(this.btnDec);
-            this.Controls.Add(this.brnZero);
+            this.Controls.Add(this.btnZero);
             this.Controls.Add(this.btnThree);
             this.Controls.Add(this.btnTwo);
             this.Controls.Add(this.btnOne);
@@ -270,14 +296,15 @@
         private Button btnThree;
         private Button btnTwo;
         private Button btnOne;
-        private Button brnZero;
+        private Button btnZero;
         private Button btnDec;
         private Button btnDivide;
         private Button btnMult;
         private Button btnSubtract;
-        private Button brnAdd;
+        private Button btnAdd;
         private Button btnEnter;
-        private TextBox textBox1;
+        private TextBox resultBox;
         private Button btnClear;
+        private Button btnEquals;
     }
 }
