@@ -10,7 +10,7 @@ namespace calculator
         private void BtnClick(object sender, EventArgs e)
         {
             Button btn = (Button)sender;
-            ConcatIntExceptWhenZero(btn.Text);
+            ClearZeroAndConcatIntExceptWhenDecimal(btn.Text);
         }
 
         public int CalcSum(int num1, int num2)
@@ -18,16 +18,14 @@ namespace calculator
             return num1 + num2;
         }
 
-        public void ConcatIntExceptWhenZero(string num)
+        public void ClearZeroAndConcatIntExceptWhenDecimal(string num)
         {
-            if (returnResultBox().Text != "0")
+            if (returnResultBox().Text == "0" && num != ".")
             {
-                resultBox.Text += num;
+                resultBox.Clear();
             }
-            else
-            {
-                resultBox.Text = num;
-            }
+
+            returnResultBox().Text += num;
         }
     }
 }

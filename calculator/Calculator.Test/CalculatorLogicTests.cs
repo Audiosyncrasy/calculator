@@ -26,10 +26,11 @@ namespace Calculator.Test
         [Theory]
         [InlineData("1", "0", "1")]
         [InlineData("1", "123", "1231")]
-        public void CalculatorForm_ConcatIntExceptWhenZero_DoesntIncludeZeroWhenConcatenating(string input, string resultsBox, string expected)
+        [InlineData(".", "0", "0.")]
+        public void CalculatorForm_ClearZeroAndConcatIntExceptWhenDecimal_ClearsZeroWhenConcatenatingExceptWhenDecimal(string input, string resultsBox, string expected)
         {
             _calcForm.returnResultBox().Text = resultsBox;
-            _calcForm.ConcatIntExceptWhenZero(input);
+            _calcForm.ClearZeroAndConcatIntExceptWhenDecimal(input);
 
             var actual = _calcForm.returnResultBox().Text;
 
