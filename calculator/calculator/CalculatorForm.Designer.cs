@@ -306,5 +306,10 @@
         private TextBox resultBox;
         private Button btnClear;
         private Button btnEquals;
+
+        public TextBox returnResultBox()
+        {
+            return resultBox;
+        }
     }
 }
