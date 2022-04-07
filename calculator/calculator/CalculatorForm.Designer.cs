@@ -47,6 +47,7 @@
             this.resultBox = new System.Windows.Forms.TextBox();
             this.btnClear = new System.Windows.Forms.Button();
             this.btnEquals = new System.Windows.Forms.Button();
+            this.resultTemp = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // btnSeven
@@ -179,6 +180,7 @@
             this.btnDivide.TabIndex = 14;
             this.btnDivide.Text = "/";
             this.btnDivide.UseVisualStyleBackColor = true;
+            this.btnDivide.Click += new System.EventHandler(this.OperatorClick);
             // 
             // btnMult
             // 
@@ -189,6 +191,7 @@
             this.btnMult.TabIndex = 13;
             this.btnMult.Text = "*";
             this.btnMult.UseVisualStyleBackColor = true;
+            this.btnMult.Click += new System.EventHandler(this.OperatorClick);
             // 
             // btnSubtract
             // 
@@ -199,6 +202,7 @@
             this.btnSubtract.TabIndex = 12;
             this.btnSubtract.Text = "-";
             this.btnSubtract.UseVisualStyleBackColor = true;
+            this.btnSubtract.Click += new System.EventHandler(this.OperatorClick);
             // 
             // btnAdd
             // 
@@ -209,6 +213,7 @@
             this.btnAdd.TabIndex = 11;
             this.btnAdd.Text = "+";
             this.btnAdd.UseVisualStyleBackColor = true;
+            this.btnAdd.Click += new System.EventHandler(this.OperatorClick);
             // 
             // btnEnter
             // 
@@ -243,6 +248,7 @@
             this.btnClear.TabIndex = 17;
             this.btnClear.Text = "CLEAR";
             this.btnClear.UseVisualStyleBackColor = false;
+            this.btnClear.Click += new System.EventHandler(this.btnClear_Click);
             // 
             // btnEquals
             // 
@@ -253,12 +259,25 @@
             this.btnEquals.TabIndex = 18;
             this.btnEquals.Text = "=";
             this.btnEquals.UseVisualStyleBackColor = true;
+            this.btnEquals.Click += new System.EventHandler(this.btnEquals_Click);
+            // 
+            // resultTemp
+            // 
+            this.resultTemp.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.resultTemp.Font = new System.Drawing.Font("Roboto Mono", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.resultTemp.Location = new System.Drawing.Point(196, 117);
+            this.resultTemp.Multiline = true;
+            this.resultTemp.Name = "resultTemp";
+            this.resultTemp.Size = new System.Drawing.Size(400, 40);
+            this.resultTemp.TabIndex = 19;
+            this.resultTemp.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // CalculatorForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(784, 761);
+            this.Controls.Add(this.resultTemp);
             this.Controls.Add(this.btnEquals);
             this.Controls.Add(this.btnClear);
             this.Controls.Add(this.resultBox);
@@ -311,5 +330,7 @@
         {
             return resultBox;
         }
+
+        private TextBox resultTemp;
     }
 }
