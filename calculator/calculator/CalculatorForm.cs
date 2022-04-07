@@ -73,6 +73,7 @@ namespace calculator
             _resultValue = 0;
             resultBox.Text = _resultValue.ToString();
             resultTemp.Text = "";
+            _operatorClicked = "";
         }
 
         private void btnEquals_Click(object sender, EventArgs e)
